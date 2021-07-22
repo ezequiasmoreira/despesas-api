@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="despesas">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Despesas</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="css/index.css">
+        <script src="js/lib/angular.min.js"></script>>
+        <script src="js/main.js"></script>
+        <script src="js/controllers/despesas-controller.js"></script>
+        <script src="js/lib/angular-route.min.js"></script>
+    </head>
+<body ng-controller="DespesasController">
+    <h1 class="text-center">Despesas</h1>
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-md-offset-4">
+            <h1 class="text-center login-title">Faça logim para continuar</h1>
+            <div class="account-wall">
+                <img class="profile-img" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"
+                    alt="">
+                <form class="form-signin">
+                <input type="text" class="form-control" placeholder="Email" required autofocus>
+                <input type="password" class="form-control" placeholder="Senha" required>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">
+                    Logar</button>
+                <label class="checkbox pull-left">
+                    <input type="checkbox" value="remember-me">
+                    Lembrar logim
+                </label>
+                <a href="#" class="pull-right need-help">Esqueci minha senha </a><span class="clearfix"></span>
+                </form>
+            </div>
+            <a href="/principal.html" class="text-center new-account">Criar uma conta </a>
+        </div>
+    </div>
+</body>
+</html>
