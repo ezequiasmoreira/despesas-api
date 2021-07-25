@@ -12,8 +12,8 @@ angular.module('despesas').controller('loginController', function($scope,loginFa
                 let usuario =  $scope.usuario;
 
                 if (!loginFactorySpec.validarFormulario($scope.formulario)) return;    
-                loginFactorySpec.validarSenha(usuario)
-                utilFactorySpec.validarEmail(usuario.email)
+                loginFactorySpec.validarSenha($scope)
+                utilFactorySpec.validarEmail(usuario.email,$scope);
 
                 loginFactoryService.cadastrar(usuario).then(successCallback, errorCallback);
 
@@ -28,8 +28,6 @@ angular.module('despesas').controller('loginController', function($scope,loginFa
             }catch (exception) {
                 $scope.mensagem = exception
                 return;
-            }
-
-           
+            }           
         };
 });

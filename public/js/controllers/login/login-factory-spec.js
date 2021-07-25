@@ -1,7 +1,9 @@
 angular.module("despesas").factory("loginFactorySpec", function () {
     
-	let _validarSenha = function (usuario) {
+	let _validarSenha = function ($scope) {
+		let usuario = $scope.usuario;
         if (usuario.senha != usuario.confirmaSenha){
+			$scope.$broadcast('validarSenha');
 			throw "Senha não confere";
 		}	
 		return true;
@@ -10,18 +12,9 @@ angular.module("despesas").factory("loginFactorySpec", function () {
 	let _validarFormulario = function (formulario) { 		 
 		return (!formulario.$valid) ? false  : true;
 	};
-
-	let _validarEmail = function (email) { 		 
-		let regex = /\S+@\S+\.\S+/;
-		if(!regex.test(email)){
-			throw "Email invalido";
-		}
-		return true;
-	};
 	
 	return {
 		validarSenha: _validarSenha,
-		validarFormulario: _validarFormulario,
-		validarEmail: _validarEmail
+		validarFormulario: _validarFormulario
 	};
 });

@@ -1,4 +1,4 @@
-angular.module('despesas', ['ngRoute'])
+angular.module('despesas', ['despesasDiretivas','ngRoute'])
 .config(function($routeProvider){
 
     $routeProvider.when('/inicio',{
